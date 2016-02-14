@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name              = "goofy"
-  s.version           = "1.0.0"
+  s.version           = "1.0.1"
   s.summary           = "Microframework for web applications"
   s.description       = "Goofy is a microframework for web applications(heavily based on Cuba)."
   s.authors           = ["Ehsan Yousefi"]
