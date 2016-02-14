@@ -6,8 +6,8 @@ A microframework for web development heavily based on [Cuba](cuba.is)
 
 ## Description
 
-Goofy is a microframework for web heavily based on [cuba.is](cuba).
-[cuba.is](cuba) is the fastest ruby microframework at the moment.
+Goofy is a microframework for web heavily based on [Cuba](cuba.is).
+Cuba is the fastest ruby microframework at the moment.
 Goofy is fast as [cuba.is](cuba) but more featured and structured.
 
 ## Installation
