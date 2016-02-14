@@ -1,14 +1,14 @@
 # Goofy
 
-A microframework for web development heavily based on [cuba.is][cuba]
+A microframework for web development heavily based on [Cuba](cuba.is)
 
 ![Goofy](http://www.coloring-book.info/coloring/Goofy/goofy_12.jpg)
 
 ## Description
 
-Goofy is a microframework for web heavily based on [cuba.is][cuba].
-[cuba.is][cuba] is the fastest ruby microframework at the moment.
-Goofy is fast as [cuba.is][cuba] but more featured and structured.
+Goofy is a microframework for web heavily based on [cuba.is](cuba).
+[cuba.is](cuba) is the fastest ruby microframework at the moment.
+Goofy is fast as [cuba.is](cuba) but more featured and structured.
 
 ## Installation
 
@@ -25,13 +25,13 @@ To get nessecary information.
 ## Controllers
 
 Goofy controllers follow SRP(Single Responsibility Principle), in other words each action maps to one controller.
-Goofy controllers use [https://github.com/EhsanYousefi/Prong][Prong] in order to support rails-like callbacks.
+Goofy controllers use [https://github.com/EhsanYousefi/Prong](Prong) in order to support rails-like callbacks.
 Every method that available in Cuba router is available in Goofy controller like `res.write`.
 Create new Goofy application and generate a controller to get to know Goofy controllers.
 
 Services
 --------
-In order to understand Goofy services, take a look at [https://github.com/krisleech/wisper][wisper] documentation, in other words Goofy uses [https://github.com/krisleech/wisper][wisper] to decouple core business logic from external concerns in Hexagonal style architectures.
+In order to understand Goofy services, take a look at [https://github.com/krisleech/wisper](wisper) documentation, in other words Goofy uses [https://github.com/krisleech/wisper](wisper) to decouple core business logic from external concerns in Hexagonal style architectures.
 
 ## Router
 
@@ -55,7 +55,7 @@ end
 
 ## Test
 
-Goofy uses [https://github.com/rspec/rspec][Rspec] as default test system.
+Goofy uses [https://github.com/rspec/rspec](Rspec) as default test system.
 
 ## Contributing
 
