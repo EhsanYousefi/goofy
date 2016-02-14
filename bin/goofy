@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+require 'bundler'
+require_relative 'goofy_instance_creator'
+require_relative 'goofy_generator'
+require_relative 'check_its_goofy'
+
+command = ARGV[0]
+app_dir = File.dirname(__FILE__).gsub(/bin/, "app")
+current_dir = FileUtils.getwd()
+
+case command
+  when "new"
+    GoofyInstanceCreator.new(ARGV[1], app_dir, current_dir).execute!
+
+  when "console", "c"
+   if ARGV[1..-1].empty?
+     exec "racksh"
+   else
+     if ARGV[-2] == '-e' || ARGV[-2] == '--environment'
+       exec "RACK_ENV=#{ARGV.last} racksh"
+     else
+       puts "Invalid option try: goofy console -e DESIRE_ENVIRONMENT"
+     end
+   end
+
+  when "server", "s"
+    if ARGV[1..-1].empty?
+      exec "shotgun config.ru"
+    else
+      exec "shotgun #{ARGV[1..-1].join(" ")} config.ru"
+    end
+
+  when "generate", "g"
+    unless CheckItsGoofy.new(current_dir).execute!
+      puts("This is not a Goofy Application, Try this command inside root folder of a Goofy application.")
+      abort
+    end
+    GoofyGenerator::Base.new(ARGV[1], ARGV[2]).execute!
+
+  when "help"
+    puts "Usage:"
+    puts "  goofy new APP_PATH"
+    puts "Server:(shoutgun)"
+    puts "  goofy server"
+    puts "Console:(racksh)"
+    puts "  gooy console"
+    puts "Generator:"
+    puts "  Resource:"
+    puts "  goofy generate resource RESOURCE_PATH"
+    puts "  Controller:"
+    puts "  goofy generate controller CONTROLLER_PATH"
+    puts "  Service:"
+    puts "  goofy generate service SERVICE_PATH"
+    puts "  Initializer:"
+    puts "  goofy generate initializer INITIALIZER_NAME"
+    puts "-----------------------------------------------------"
+    puts "Good luck :)"
+  else
+    puts "Invalid command try: goofy help"
+end
