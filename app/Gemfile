@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Microframework for web applications
-gem 'goofy', '~> 1.0.0', :require => ['goofy','goofy/controller'], :path => '/Users/Liberal/Desktop/goofy'
+gem 'goofy', '~> 1.0.0', :require => ['goofy','goofy/controller']
 # A micro library providing Ruby objects with Publish-Subscribe capabilities
 gem 'wisper'
 # A wonderfully simple way to load your code
