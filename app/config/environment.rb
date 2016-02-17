@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler'
-Bundler.require(:default)
+Bundler.require(:default, ENV["RACK_ENV"])
 require "require_all"
 require "goofy"
 require "goofy/controller"
