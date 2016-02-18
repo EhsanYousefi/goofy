@@ -7,7 +7,7 @@ gem 'wisper'
 # A wonderfully simple way to load your code
 gem 'require_all'
 
-group :test, :development do
+group :test do
   # Behaviour Driven Development for Ruby
   gem 'rspec'
 end
