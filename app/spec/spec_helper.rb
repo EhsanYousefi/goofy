@@ -1,3 +1,4 @@
+ENV["RACK_ENV"] = "test"
 require 'require_all'
 require ::File.expand_path('../../config/environment', __FILE__)
 require 'rack/test'
