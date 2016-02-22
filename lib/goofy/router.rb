@@ -1,8 +1,8 @@
 class Goofy
   module Router
 
-    def controller(ctrl_class)
-      ctrl_class.construct self
+    def controller(ctrl_class, params={})
+      ctrl_class.construct self, params
     end
 
   end
