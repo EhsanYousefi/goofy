@@ -1,8 +1,8 @@
 class Goofy
   class Controller
 
-    def self.construct(arg)
-      self.new(arg,params).entry
+    def self.construct(arg,paramters)
+      self.new(arg,paramters).entry
     end
     
     attr_reader :params
