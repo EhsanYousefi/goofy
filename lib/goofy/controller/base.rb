@@ -2,11 +2,14 @@ class Goofy
   class Controller
 
     def self.construct(arg)
-      self.new(arg).entry
+      self.new(arg,params).entry
     end
-
-    def initialize(app)
+    
+    attr_reader :params
+    
+    def initialize(app,params)
       @app = app
+      @params = params
     end
 
     def response
